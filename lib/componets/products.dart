@@ -32,6 +32,18 @@ class _ProductsState extends State<Products> {
       "picture": "images/products/shoe1.jpg",
       "old_price": "3001",
       "price": "2999",
+    },
+    {
+      "name": "skt",
+      "picture": "images/products/skt1.jpeg",
+      "old_price": "901",
+      "price": "399",
+    },
+    {
+      "name": "hills",
+      "picture": "images/products/hills2.jpeg",
+      "old_price": "901",
+      "price": "399",
     }
   ];
   @override
@@ -67,39 +79,37 @@ class Single_prod extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Card(
-        child: Hero(
-          tag: prod_name,
-          child: Material(
-            child: InkWell(
-              onTap: () {},
-              child: GridTile(
-                footer: Container(
-                  color: Colors.white70,
-                  child: ListTile(
-                    leading: Text(
-                      prod_name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    title: Text(
-                      "\₹$prod_price",
-                      style: TextStyle(
-                          color: Colors.red, fontWeight: FontWeight.w800),
-                    ),
-                    subtitle: Text(
-                      "\₹$prod_old_price",
-                      style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.w800,
-                          decoration: TextDecoration.lineThrough),
-                    ),
+    return Card(
+      child: Hero(
+        tag: prod_name,
+        child: Material(
+          child: InkWell(
+            onTap: () {},
+            child: GridTile(
+              footer: Container(
+                color: Colors.white70,
+                child: ListTile(
+                  leading: Text(
+                    prod_name,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  title: Text(
+                    "\₹$prod_price",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.w800),
+                  ),
+                  subtitle: Text(
+                    "\₹$prod_old_price",
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.w800,
+                        decoration: TextDecoration.lineThrough),
                   ),
                 ),
-                child: Image.asset(
-                  prod_pricture,
-                  fit: BoxFit.cover,
-                ),
+              ),
+              child: Image.asset(
+                prod_pricture,
+                fit: BoxFit.cover,
               ),
             ),
           ),
