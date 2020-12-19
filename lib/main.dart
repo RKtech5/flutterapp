@@ -145,7 +145,8 @@ class _MyAppState extends State<MyApp> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
             ),
           ),
-          //Grid View
+          //Grid
+
           Container(
             height: 320.0,
             child: Products(),
