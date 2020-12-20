@@ -146,10 +146,11 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           //Grid
-
-          Container(
-            height: 320.0,
-            child: Products(),
+          SingleChildScrollView(
+            child: Container(
+              height: 320.0,
+              child: Products(),
+            ),
           ),
         ],
       ),
