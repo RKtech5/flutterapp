@@ -50,10 +50,68 @@ class _ProductsDetailsState extends State<ProductsDetails> {
           Container(
             height: 300.0,
             child: GridTile(
-                child: Container(
-                    color: Colors.white,
-                    child: Image.asset(widget.product_detail_picture))),
-          )
+              child: Container(
+                color: Colors.white,
+                //picture
+                child: Image.asset(widget.product_detail_picture),
+              ),
+              //price details
+              footer: Container(
+                color: Colors.white70,
+                child: ListTile(
+                  leading: Text(
+                    widget.product_detail_name,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  title: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          "\₹${widget.product_detail_old_price}",
+                          style: TextStyle(
+                              color: Colors.grey,
+                              decoration: TextDecoration.lineThrough),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "\₹${widget.product_detail_new_price}",
+                          style: TextStyle(
+                              color: Colors.red, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          // the first button //
+          Row(
+            children: <Widget>[
+              Expanded(
+                  child: MaterialButton(
+                onPressed: () {},
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text("Size"),
+                    ),
+                    Expanded(
+                      child: Icon(Icons.arrow_drop_down),
+                    ),
+                  ],
+                ),
+              ))
+            ],
+          ),
+          //Second button
         ],
       ),
     );
